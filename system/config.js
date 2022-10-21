@@ -1,5 +1,5 @@
 // Owner number
-global.owner = '6285845575733'
+global.owner = '6285807264974'
 // Owner name
 global.owner_name = 'ALIF TEAMNERxRAMA'
 // Maximum upload file size limit (Default : 50 MB)
@@ -24,7 +24,7 @@ global.chatai_key = 'MKPsfkgXLZPGrWoH'
 // Source version
 global.version = '5.4.7',
 // Footer text
-global.footer = 'Alif bot'
+global.footer = 'kanna'
 // Global status
 global.status = Object.freeze({
    wait: Func.texted('bold', 'Processed . . .'),

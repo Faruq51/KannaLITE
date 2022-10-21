@@ -1,5 +1,5 @@
 // Owner number
-global.owner = '6285807264974'
+global.owner = ["6285807264974","6285776177274","6285845575733"]
 // Owner name
 global.owner_name = 'ALIF TEAMNERxRAMA'
 // Maximum upload file size limit (Default : 50 MB)

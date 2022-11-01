@@ -1,5 +1,5 @@
 // Owner number
-global.owner = '62882015576398'
+global.owner = '6285763667697'
 // Owner name
 global.owner_name = 'Nal Hosting'
 // Maximum upload file size limit (Default : 50 MB)
@@ -15,7 +15,7 @@ global.evaluate_chars = ['=>', '~>', '<', '>', '$']
 // Country code that will be automatically blocked by the system, when sending messages in private chat
 global.blocks = ['91', '92', '212']
 // Put target jid to forward friends story
-global.forwards = '62882015576398'
+global.forwards = '6285763667697'
 // Get neoxr apikey by registering at https://api.neoxr.my.id
 global.Api = new (require('./neoxrApi'))(process.env.API_KEY)
 // Get bid and key configuration for autoreply chat ai feature by registering at https://brainshop.ai
@@ -24,7 +24,7 @@ global.chatai_key = 'MKPsfkgXLZPGrWoH'
 // Source version
 global.version = '5.4.7',
 // Footer text
-global.footer = 'BOT KLZZ'
+global.footer = 'Nal Hosting'
 // Global status
 global.status = Object.freeze({
    wait: Func.texted('bold', 'Processed . . .'),

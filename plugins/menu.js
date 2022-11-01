@@ -180,6 +180,7 @@ exports.run = {
 ◦ Swift
 ◦ FARUQOFC`
       client.sendMessageModify(m.chat, captions, m, {
+               title: 'NALHOST.MYID',
                largeThumb: true,
                thumbnail: await Func.fetchBuffer('https://telegra.ph/file/9bd483d0844c97dbe6f72.jpg'),
                url: 'wa.me/6285807264974?text=beli+sc+bang'

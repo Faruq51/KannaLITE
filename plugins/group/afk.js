@@ -11,7 +11,7 @@ exports.run = {
          user.afk = +new Date
          user.afkReason = text
          let tag = m.sender.split`@` [0]
-         return client.reply(m.chat, Func.texted('bold', `🚩 @${tag} Kamu seksrang AFK!`), m)
+         return client.reply(m.chat, Func.texted('bold', `🚩 @${tag} Kamu sekarang AFK!`), m)
       } catch {
          client.reply(m.chat, global.status.error, m)
       }

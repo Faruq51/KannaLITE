@@ -1,5 +1,5 @@
 exports.run = {
-   usage: ['menu', 'help', 'allmenu'],
+   usage: ['menu', 'bot', 'allmenu'],
    hidden: ['menutype'],
    async: async (m, {
       client,
@@ -7,7 +7,12 @@ exports.run = {
       isPrefix
    }) => {
       try {
-      let captions = ` ❑  *I N F O - B O T*\n\n◦  Sistem otomatis (WhatsApp Bot) yang dapat membantu untuk melakukan sesuatu, mencari dan mendapatkan data/informasi hanya melalui WhatsApp.\n\n❑ *N O T E* \n\n◦   Gunakan bot di private message agar bot merespon dengan cepat, \n\n◦  Beri jeda  yah kak ｡⁠◕⁠‿⁠◕⁠｡\nS\n
+      let captions = ` ❑  *I N F O - B O T*
+◦  Sistem otomatis (WhatsApp Bot) yang dapat membantu untuk melakukan sesuatu,
+◦  mencari dan mendapatkan data/informasi hanya melalui WhatsApp.
+◦  Gunakan bot di private message agar bot merespon dengan cepat
+◦  Beri jeda  yah kak ｡⁠◕⁠‿⁠◕⁠｡
+
  ❑  *U S E R - I N F O*
       
 ◦  ${isPrefix}limit 
@@ -169,13 +174,14 @@ exports.run = {
 ◦  ${isPrefix}owner 
 ◦  ${isPrefix}premium 
 ◦  ${isPrefix}runtime
+
 ❑ *T Q - T O*
+
 ◦ Swift
 ◦ FARUQOFC`
       client.sendMessageModify(m.chat, captions, m, {
-               title: 'BOT KLZZ',
                largeThumb: true,
-               thumbnail: await Func.fetchBuffer('https://telegra.ph/file/c02b34473716ecb760539.jpg'),
+               thumbnail: await Func.fetchBuffer('https://telegra.ph/file/9bd483d0844c97dbe6f72.jpg'),
                url: 'wa.me/6285807264974?text=beli+sc+bang'
             })
       } catch (e) {

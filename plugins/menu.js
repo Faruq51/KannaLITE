@@ -6,6 +6,19 @@ exports.run = {
       text,
       isPrefix
    }) => {
+      let buttons = [{
+         buttonId: `.sewabot`,
+         buttonText: {
+                  displayText: 'SEWABOT'
+               },
+               type: 1
+            }, {
+               buttonId: `.owner`,
+               buttonText: {
+                  displayText: 'OWNER'
+               },
+               type: 1
+            }]
       try {
       let captions = ` ❑  *I N F O - B O T*
 ◦  Sistem otomatis (WhatsApp Bot) yang dapat membantu untuk melakukan sesuatu,
@@ -179,11 +192,12 @@ exports.run = {
 
 ◦ Swift
 ◦ FARUQOFC`
-      client.sendMessageModify(m.chat, captions, m, {
-               title: 'NALHOST.MYID',
-               largeThumb: true,
+      client.sendButton(m.chat, captions, m, {
+                    document: true,
+          }, {
+               title: 'System otomatis',
                thumbnail: await Func.fetchBuffer('https://telegra.ph/file/9bd483d0844c97dbe6f72.jpg'),
-               url: 'wa.me/6285807264974?text=beli+sc+bang'
+               fileName: 'NALHOST.MYID'
             })
       } catch (e) {
          client.reply(m.chat, Func.jsonFormat(e), m)

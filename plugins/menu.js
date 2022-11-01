@@ -181,6 +181,7 @@ exports.run = {
 ◦ FARUQOFC`
       client.sendMessageModify(m.chat, captions, m, {
                title: 'ılılllıllılllıllı\n𝑵𝑨𝑳𝑯𝑶𝑺𝑻.𝑴𝒀𝑰𝑫',
+               largeThumb: true,
                thumbnail: await Func.fetchBuffer('https://telegra.ph/file/9bd483d0844c97dbe6f72.jpg'),
                url: 'https://chat.whatsapp.com/KG9EraduWh2Bz3mdWbkHjl'
             })

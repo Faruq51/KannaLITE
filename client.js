@@ -141,13 +141,13 @@ const connect = async () => {
    client.ev.on('group-participants.update', async (room) => {
       let meta = await (await client.groupMetadata(room.id))
       let member = room.participants[0]
-      let text_welcome = `*Halo +tag👋 jangan lupa semangat yah*`
-      let text_left = `*+tag👋 Sayonara*`
+      let text_welcome = `*Welcome +tag*`
+      let text_left = `*+tag Sayonara*`
       let groupSet = global.db.groups[room.id]
       try {
          pic = await Func.fetchBuffer(await client.profilePictureUrl(member, 'image'))
       } catch {
-         pic = await Func.fetchBuffer(await client.profilePictureUrl(room.id, 'image'))
+         pic = await Func.fetchBuffer(./media/image/default.jpg')
       }
       if (room.action == 'add') {
          if (groupSet.localonly) {
@@ -159,18 +159,18 @@ const connect = async () => {
          }
          let txt = (groupSet.text_welcome != '' ? groupSet.text_welcome : text_welcome).replace('+tag', `@${member.split`@`[0]}`).replace('+grup', `${meta.subject}`)
          if (groupSet.welcome) client.sendMessageModify(room.id, txt, null, {
-            title: 'Yah beban group nambah lagi',
+            title: '\nPesan otomatis',
             largeThumb: true,
             thumbnail: pic,
-            url: 'https://chat.whatsapp.com/KG9EraduWh2Bz3mdWbkHjl'
+            url: 'https://wa.me/6285807264974?text=gw+beli+scnya+bang'
          })
       } else if (room.action == 'remove') {
          let txt = (groupSet.text_left != '' ? groupSet.text_left : text_left).replace('+tag', `@${member.split`@`[0]}`).replace('+grup', `${meta.subject}`)
          if (groupSet.left) client.sendMessageModify(room.id, txt, null, {
-            title: 'Yey beban group keluar',
+            title: '\nPesan otomatis',
             largeThumb: true,
             thumbnail: pic,
-            url: 'https://chat.whatsapp.com/KG9EraduWh2Bz3mdWbkHjl'
+            url: 'https://wa.me/6285807264974?text=gw+beli+scnya+bang'
          })
       }
    })

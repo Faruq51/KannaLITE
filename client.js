@@ -147,7 +147,7 @@ const connect = async () => {
       try {
          pic = await Func.fetchBuffer(await client.profilePictureUrl(member, 'image'))
       } catch {
-         pic = await Func.fetchBuffer(./media/image/default.jpg')
+         pic = await Func.fetchBuffer('./media/image/default.jpg')
       }
       if (room.action == 'add') {
          if (groupSet.localonly) {

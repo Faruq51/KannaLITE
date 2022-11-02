@@ -7,31 +7,31 @@ exports.run = {
       isPrefix
    }) => {
       try {
-      let captions = ` 🔮  *I N F O - B O T*
+      let captions = `     🔮  *I N F O - B O T*  🔮
 
 🚥  Sistem otomatis (WhatsApp Bot) yang dapat membantu untuk melakukan sesuatu,
 🚥  mencari dan mendapatkan data/informasi hanya melalui WhatsApp.
 🚥  Gunakan bot di private message agar bot merespon dengan cepat
 🚥  Beri jeda  yah kak ｡⁠◕⁠‿⁠◕⁠｡
 
-   🔮  *I N F O R M A S I*
+     🔮  *I N F O R M A S I*  🔮
         
-        🚥 Cpecial owner 🅟
-        🚥 Free user 🅕
+🚥 Cpecial owner 🅟
+🚥 Free user 🅕
 
-   🔮  *U S E R - I N F O*
+     🔮  *U S E R - I N F O*  🔮
       
 🚥  ${isPrefix}limit 🅕
 🚥  ${isPrefix}me 🅕
 
-   🔮  *G R O U P*
+     🔮  *G R O U P*  🔮
 
 🚥  ${isPrefix}afk *reason (optional)* 🅕
 🚥  ${isPrefix}ava *mention or reply* 🅕
 🚥  ${isPrefix}delete *reply chat* 🅟
 🚥  ${isPrefix}q *reply chat* 🅟
 
-   🔮  *C O N V E R T E R*
+     🔮  *C O N V E R T E R*  🔮
 
 🚥  ${isPrefix}emojimix *emoji + emoji* 🅕
 🚥  ${isPrefix}sticker *reply media* 🅕
@@ -41,7 +41,7 @@ exports.run = {
 🚥  ${isPrefix}tomp3 *reply media* 🅕
 🚥  ${isPrefix}tovn *reply media* 🅕
 
-   🔮  *D O W N L O A D E R*
+     🔮  *D O W N L O A D E R*  🔮
 
 🚥  ${isPrefix}apk *query* 🅕
 🚥  ${isPrefix}fb *link* 🅕
@@ -60,7 +60,7 @@ exports.run = {
 🚥  ${isPrefix}ytmp3 *link* 🅕
 🚥  ${isPrefix}ytmp4 *link* 🅕
 
-   🔮  *S E A R C H*
+     🔮  *S E A R C H*  🔮
 
 🚥  ${isPrefix}brainly *question* 🅕
 🚥  ${isPrefix}halah *text or reply chat* 🅕
@@ -73,7 +73,7 @@ exports.run = {
 🚥  ${isPrefix}server 🅕
 🚥  ${isPrefix}wallpaper *query* 🅕
 
-   🔮  *T E X T - M A K E R*
+     🔮  *T E X T - M A K E R*  🔮
 
 🚥  ${isPrefix}blackpink *text* 🅕
 🚥  ${isPrefix}blood *text* 🅕
@@ -87,7 +87,7 @@ exports.run = {
 🚥  ${isPrefix}papercut *text* 🅕
 🚥  ${isPrefix}slice *text* 🅕
 
-   🔮 *I M A G E - E F F E C T*
+     🔮 *I M A G E - E F F E C T*  🔮
 
 🚥  ${isPrefix}alien *reply foto* 🅕
 🚥  ${isPrefix}brick *reply foto* 🅕
@@ -104,7 +104,7 @@ exports.run = {
 🚥  ${isPrefix}splash *reply foto* 🅕
 🚥  ${isPrefix}staco *reply foto* 🅕
 
-   🔮  *A D M I N - T O O L S*
+     🔮  *A D M I N - T O O L S*  🔮
 
 🚥  ${isPrefix}antidelete *on / off* 🅕
 🚥  ${isPrefix}antilink *on / off* 🅕
@@ -125,7 +125,7 @@ exports.run = {
 🚥  ${isPrefix}setwelcome *text* 🅕
 🚥  ${isPrefix}welcome *on / off* 🅕
 
-   🔮  *O W N E R*
+     🔮  *O W N E R*  🔮
 
 🚥  ${isPrefix}-cmdstic *text / command* 🅟
 🚥  ${isPrefix}-mimic *mention or reply* 🅟
@@ -169,7 +169,7 @@ exports.run = {
 🚥  ${isPrefix}unblock *mention or reply* 🅟
 🚥  ${isPrefix}update 🅟
 
-   🔮  *S P E C I A L*
+     🔮  *S P E C I A L*  🔮
 
 🚥  ${isPrefix}botstat 
 🚥  ${isPrefix}checkapi 
@@ -179,9 +179,13 @@ exports.run = {
 🚥  ${isPrefix}list 
 🚥  ${isPrefix}owner 
 🚥  ${isPrefix}premium 
-🚥  ${isPrefix}runtime`
+🚥  ${isPrefix}runtime
+
+    🔮   Subscribe   🔮
+https://youtube.com/channel/UChzA8qbuMQJEWFuBwZJvvHw
+    © Powered by Faruqofc`
       client.sendMessageModify(m.chat, captions, m, {
-               title: '𝑲𝑨𝑵𝑵𝑨 𝑽2.6.4',
+               title: '𝑲𝑨𝑵𝑵𝑨 𝑽 2.6.4',
                largeThumb: true,
                thumbnail: await Func.fetchBuffer('https://telegra.ph/file/f261207c92571791a4007.jpg'),
                url: ''

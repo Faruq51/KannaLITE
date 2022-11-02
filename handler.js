@@ -165,7 +165,7 @@ module.exports = async (client, m) => {
                if (users.limit >= limit) {
                   users.limit -= limit
                } else {
-                  client.reply(m.chat, Func.texted('bold', `🚩 Limit kamu tidak cukup untuk menggunakan fitur ini.`), m)
+                  client.reply(m.chat, Func.texted('bold', `Limit lu ga cukup buat make fitur ini🔮`), m)
                   continue
                }
             }

@@ -89,12 +89,12 @@ const connect = async () => {
          })
       }
       if (connection === 'connecting') spinnies.add('start', {
-         text: 'Connecting . . .'
+         text: 'Tunggu sebentar. . .'
       })
       if (connection === 'open') {
          global.db.creds = client.authState.creds
          spinnies.succeed('start', {
-            text: `Connected, you login as ${client.user.name || client.user.verifiedName}`
+            text: `Terhubung ke ${client.user.name || client.user.verifiedName}`
          })
       }
       if (connection === 'close') {
@@ -147,7 +147,7 @@ const connect = async () => {
       try {
          pic = await Func.fetchBuffer(await client.profilePictureUrl(member, 'image'))
       } catch {
-         pic = await Func.fetchBuffer('./media/image/default.jpg')
+         pic = await Func.fetchBuffer(await client.profilePictureUrl(member, 'image'))
       }
       if (room.action == 'add') {
          if (groupSet.localonly) {
@@ -159,15 +159,15 @@ const connect = async () => {
          }
          let txt = (groupSet.text_welcome != '' ? groupSet.text_welcome : text_welcome).replace('+tag', `@${member.split`@`[0]}`).replace('+grup', `${meta.subject}`)
          if (groupSet.welcome) client.sendMessageModify(room.id, txt, null, {
-            title: '\nPesan otomatis',
+            title: '\nKanna downgrade',
             largeThumb: true,
-            thumbnail: pic,
+            thumbnail: await Func.fetchBuffer('https://telegra.ph/file/dec8b92f3dec03da50c97.jpg'),
             url: 'https://wa.me/6285807264974?text=gw+beli+scnya+bang'
          })
       } else if (room.action == 'remove') {
          let txt = (groupSet.text_left != '' ? groupSet.text_left : text_left).replace('+tag', `@${member.split`@`[0]}`).replace('+grup', `${meta.subject}`)
          if (groupSet.left) client.sendMessageModify(room.id, txt, null, {
-            title: '\nPesan otomatis',
+            title: '\nKanna downgrade',
             largeThumb: true,
             thumbnail: pic,
             url: 'https://wa.me/6285807264974?text=gw+beli+scnya+bang'

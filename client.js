@@ -162,7 +162,7 @@ const connect = async () => {
             title: 'Kanna downgrade',
             largeThumb: true,
             thumbnail: await Func.fetchBuffer('https://telegra.ph/file/dec8b92f3dec03da50c97.jpg'),
-            url: 'https://wa.me/6285807264974?text=gw+beli+scnya+bang'
+            url: ''
          })
       } else if (room.action == 'remove') {
          let txt = (groupSet.text_left != '' ? groupSet.text_left : text_left).replace('+tag', `@${member.split`@`[0]}`).replace('+grup', `${meta.subject}`)
@@ -170,7 +170,7 @@ const connect = async () => {
             title: 'Kanna downgrade',
             largeThumb: true,
             thumbnail: pic,
-            url: 'https://wa.me/6285807264974?text=gw+beli+scnya+bang'
+            url: ''
          })
       }
    })

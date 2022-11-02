@@ -114,9 +114,9 @@ module.exports = async (client, m) => {
             global.db.chats[m.chat].lastseen = new Date() * 1
          }
          if (!commands.includes(command) && matcher.length > 0 && !setting.self) {
-            if (!m.isGroup || (m.isGroup && !groupSet.mute)) return client.reply(m.chat, `Rekomendasi :\n\n${matcher.map(v => '➠ *' + (isPrefix ? isPrefix : '') + v.string + '* (' + v.accuracy + '%)').join('\n')}`, m)
+            if (!m.isGroup || (m.isGroup && !groupSet.mute)) return client.reply(m.chat, `Maksud lu ${matcher.map(v => '➠ *' + (isPrefix ? isPrefix : '') + v.string + '* (' + v.accuracy + '%)').join('\n')}`, m)
          }
-         if (setting.error.includes(command) && !setting.self) return client.reply(m.chat, Func.texted('bold', `🚩 Command _${isPrefix + command}_ disabled.`), m)
+         if (setting.error.includes(command) && !setting.self) return client.reply(m.chat, Func.texted('bold', `🔮 Command _${isPrefix + command}_ disabled.`), m)
          if (commands.includes(command)) {
             users.hit += 1
             users.usebot = new Date() * 1
@@ -130,12 +130,12 @@ module.exports = async (client, m) => {
             if (!turn && !turn_hidden) continue
             if (!m.isGroup && global.blocks.some(no => m.sender.startsWith(no))) return client.updateBlockStatus(m.sender, 'block')
             if (setting.self && !isOwner && !m.fromMe) return
-            if (setting.pluginDisable.includes(name)) return client.reply(m.chat, Func.texted('bold', `🚩 Plugin disabled by Owner.`), m)
+            if (setting.pluginDisable.includes(name)) return client.reply(m.chat, Func.texted('bold', `🔮 Plugin disabled by Owner.`), m)
             if (!m.isGroup && !['owner', 'create_bot'].includes(name) && chats && !isPrem && !users.banned && new Date() * 1 - chats.lastchat < global.timer) continue
-            if (!m.isGroup && !['owner', 'create_bot'].includes(name) && chats && !isPrem && !users.banned && setting.groupmode) return client.sendMessageModify(m.chat, `Untuk bisa menggunakan bot di personal chat (PC) kamu harus mempunyai limits minimal *Rp. 5000* atau cara cepat dengan upgrade ke premium user.\n\nJika ingin upgrade ke premium silahkan masuk ke grup ini dan kirim *${prefixes[0]}owner*`, m, {
-               title: '',
+            if (!m.isGroup && !['owner', 'create_bot'].includes(name) && chats && !isPrem && !users.banned && setting.groupmode) return client.sendMessageModify(m.chat, `🔮Untuk bisa menggunakan bot di personal chat (PC) kamu harus mempunyai limits minimal *Rp. 5000* atau cara cepat dengan upgrade ke premium kirim *${prefixes[0]}owner*\n\nJoin group untuk mendapatkan update script Kanna bot`, m, {
+               title: 'Group mode: on',
                largeThumb: true,
-               thumbnail: await Func.fetchBuffer('https://telegra.ph/file/5b41c6d53b226403e8c9a.jpg'),
+               thumbnail: await Func.fetchBuffer('https://telegra.ph/file/68687bf07a9774acf1a9a.jpg'),
                url: 'https://chat.whatsapp.com/KG9EraduWh2Bz3mdWbkHjl'
             }).then(() => chats.lastchat = new Date() * 1)
             if (!['me', 'owner'].includes(name) && users && (users.banned || new Date - users.banTemp < global.timer)) return
@@ -211,8 +211,8 @@ module.exports = async (client, m) => {
             if (m.isGroup && !['exec'].includes(name) && groupSet.mute) continue
             if (setting.pluginDisable.includes(name)) continue
             if (!m.isGroup && chats && !isPrem && !users.banned && new Date() * 1 - chats.lastchat < global.timer) continue
-            if (!m.isGroup && chats && !isPrem && !users.banned && setting.groupmode) return client.sendMessageModify(m.chat, `Untuk bisa menggunakan bot di personal chat (PC) kamu harus mempunyai limits minimal *Rp. 5000* atau cara cepat dengan upgrade ke premium user.\n\nJika ingin upgrade ke premium silahkan masuk ke grup ini dan kirim *${prefixes[0]}owner*`, m, {
-               tiltle: 'Maaf akses di tolak',
+            if (!m.isGroup && chats && !isPrem && !users.banned && setting.groupmode) return client.sendMessageModify(m.chat, `🔮Untuk bisa menggunakan bot di personal chat (PC) kamu harus mempunyai limits minimal *Rp. 5000* atau cara cepat dengan upgrade ke premium user.\n\nJika ingin upgrade ke premium kirim *${prefixes[0]}owner*\n\nJoin group untuk mendapatkan update script Kanna bo`, m, {
+               tiltle: 'Group mode: on',
                largeThumb: true,
                thumbnail: await Func.fetchBuffer('https://telegra.ph/file/5b41c6d53b226403e8c9a.jpg'),
                url: 'https://chat.whatsapp.com/KG9EraduWh2Bz3mdWbkHjl'

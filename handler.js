@@ -133,7 +133,7 @@ module.exports = async (client, m) => {
             if (setting.pluginDisable.includes(name)) return client.reply(m.chat, Func.texted('bold', `🚩 Plugin disabled by Owner.`), m)
             if (!m.isGroup && !['owner', 'create_bot'].includes(name) && chats && !isPrem && !users.banned && new Date() * 1 - chats.lastchat < global.timer) continue
             if (!m.isGroup && !['owner', 'create_bot'].includes(name) && chats && !isPrem && !users.banned && setting.groupmode) return client.sendMessageModify(m.chat, `Untuk bisa menggunakan bot di personal chat (PC) kamu harus mempunyai limits minimal *Rp. 5000* atau cara cepat dengan upgrade ke premium user.\n\nJika ingin upgrade ke premium silahkan masuk ke grup ini dan kirim *${prefixes[0]}owner*`, m, {
-               title: 'Maaf akses di tolak',
+               title: '',
                largeThumb: true,
                thumbnail: await Func.fetchBuffer('https://telegra.ph/file/5b41c6d53b226403e8c9a.jpg'),
                url: 'https://chat.whatsapp.com/KG9EraduWh2Bz3mdWbkHjl'
@@ -157,7 +157,7 @@ module.exports = async (client, m) => {
                continue
             }
             if (cmd.limit && users.limit < 1) {
-               return client.reply(m.chat, `Penggunaan bot Anda telah mencapai batas dan akan disetel ulang pada pukul 00.00\n\nUntuk mendapatkan lebih banyak batas, tingkatkan ke paket premium kirim *${prefixes[0]}premium*`, m).then(() => users.premium = false)
+               return client.reply(m.chat, `🔮Limit lu abis, limit lu gw reset jam 12 malem\natau tingkatkan ke paket premium kirim *${prefixes[0]}premium*`, m).then(() => users.premium = false)
                continue
             }
             if (cmd.limit && users.limit > 0) {

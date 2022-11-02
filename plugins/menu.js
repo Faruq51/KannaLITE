@@ -14,7 +14,7 @@ exports.run = {
 🚥  Gunakan bot di private message agar bot merespon dengan cepat
 🚥  Beri jeda  yah kak ｡⁠◕⁠‿⁠◕⁠｡
 
-        🔮  *I N F O R M A S I*
+   🔮  *I N F O R M A S I*
         
         🚥 Cpecial owner 🅟
         🚥 Free user 🅕

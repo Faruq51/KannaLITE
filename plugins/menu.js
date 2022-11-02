@@ -173,16 +173,11 @@ exports.run = {
 ◦  ${isPrefix}list 
 ◦  ${isPrefix}owner 
 ◦  ${isPrefix}premium 
-◦  ${isPrefix}runtime
-
-❑ *T Q - T O*
-
-◦ Swift
-◦ FARUQOFC`
+◦  ${isPrefix}runtime`
       client.sendMessageModify(m.chat, captions, m, {
-               title: '𝑵𝑨𝑳𝑯𝑶𝑺𝑻.𝑴𝒀𝑰𝑫',
+               title: '𝑲𝑨𝑵𝑵𝑨 𝑽2.6.4',
                largeThumb: true,
-               thumbnail: await Func.fetchBuffer('https://telegra.ph/file/9bd483d0844c97dbe6f72.jpg'),
+               thumbnail: await Func.fetchBuffer('https://telegra.ph/file/f261207c92571791a4007.jpg'),
                url: 'https://chat.whatsapp.com/KG9EraduWh2Bz3mdWbkHjl'
             })
       } catch (e) {
